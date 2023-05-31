@@ -20,6 +20,7 @@ dependencies {
     implementation(group = "io.kotless", name = "kotless-lang", version = "0.2.0")
     implementation(group = "io.kotless", name = "kotless-lang-aws", version = "0.2.0")
     implementation(group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version = "1.4.1")
+    implementation(group = "org.jetbrains.kotlinx", name = "kotlinx-html-jvm", version = "0.8.0")
 }
 
 tasks.test {
