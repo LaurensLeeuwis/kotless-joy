@@ -21,6 +21,7 @@ dependencies {
     implementation(group = "io.kotless", name = "kotless-lang-aws", version = "0.2.0")
     implementation(group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version = "1.4.1")
     implementation(group = "org.jetbrains.kotlinx", name = "kotlinx-html-jvm", version = "0.8.0")
+    implementation(group = "com.sun.mail", name = "jakarta.mail", version = "2.0.1")
 }
 
 tasks.test {

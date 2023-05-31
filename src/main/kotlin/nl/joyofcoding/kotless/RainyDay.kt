@@ -26,3 +26,12 @@ fun rainyDay() =
                 }
             }
         }
+        ?.let {
+            Emailer.sendEmail("Take your umbrella?", it,
+                "from@example.com", "Apps",
+                "to@example.com")
+        }
+        ?.let {
+            if (it) {"email sent"} else {"sending email failed"}
+        }
+        ?: "No chance of rain"
