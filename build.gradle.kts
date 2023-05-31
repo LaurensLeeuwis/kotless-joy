@@ -1,3 +1,4 @@
+import io.kotless.plugin.gradle.dsl.kotless
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -25,4 +26,27 @@ tasks.test {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "11"
+}
+
+// import io.kotless.plugin.gradle.dsl.kotless
+kotless {
+    config {
+        aws {
+            storage {
+                bucket = "kotless-rainy-day-s3-bucket"
+            }
+
+            prefix = "rainy"
+
+            profile = "kotless-rainy-day-user"
+            region = "eu-central-1"
+        }
+    }
+    webapp {
+        lambda {
+            kotless {
+                packages = setOf("nl.joyofcoding.kotless")
+            }
+        }
+    }
 }
