@@ -40,7 +40,7 @@ kotless {
                 bucket = "kotless-rainy-day-s3-bucket"
             }
 
-            prefix = "rainy"
+//            prefix = "rainy"
 
             profile = "kotless-rainy-day-user"
             region = "eu-central-1"

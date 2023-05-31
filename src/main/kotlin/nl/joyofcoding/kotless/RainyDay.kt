@@ -1,6 +1,6 @@
 package nl.joyofcoding.kotless
 
-import io.kotless.dsl.lang.http.Get
+import io.kotless.dsl.lang.event.Scheduled
 import kotlinx.html.body
 import kotlinx.html.h1
 import kotlinx.html.html
@@ -8,7 +8,8 @@ import kotlinx.html.img
 import kotlinx.html.p
 import kotlinx.html.stream.createHTML
 
-@Get("/")
+// Amazon Cloudwatch cron. Runs 21:55 UTC, daily
+@Scheduled("55 21 * * ? *")
 fun rainyDay() =
     getBuienRadarData().forecast.fivedayforecast[0]
         .takeIf { it.rainChance >= 20 }
