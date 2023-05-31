@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.6.10"
+    kotlin("plugin.serialization") version "1.6.10"
     id("io.kotless") version "0.2.0"
 }
 
@@ -18,6 +19,7 @@ dependencies {
     testImplementation(kotlin("test"))
     implementation(group = "io.kotless", name = "kotless-lang", version = "0.2.0")
     implementation(group = "io.kotless", name = "kotless-lang-aws", version = "0.2.0")
+    implementation(group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version = "1.4.1")
 }
 
 tasks.test {
